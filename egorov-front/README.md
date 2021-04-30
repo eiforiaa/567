@@ -1,4 +1,4 @@
-# mega-project
+# egorov-project
 
 ## Project setup
 ```

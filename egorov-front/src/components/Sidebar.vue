@@ -1,12 +1,12 @@
 <template>
   <div class="sidebar">
     <SidebarRow
-      v-for="(hotel, index) in hotels"
-      :key="hotel.id"
-      :id="hotel.id"
+      v-for="(attraction, index) in attractions"
+      :key="attraction.id"
+      :id="attraction.id"
       :row-number="index + 1"
-      :title="hotel.fullName"
-      @change-hotel="$emit('change-hotel', $event)"
+      :title="attraction.name"
+      @change-attraction="$emit('change-attraction', $event)"
     />
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     SidebarRow
   },
   props: {
-    hotels: {
+    attractions: {
       type: Array,
       required: true
     }

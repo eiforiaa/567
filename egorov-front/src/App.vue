@@ -2,10 +2,10 @@
   <Layout>
     <Sidebar
       slot="sidebar"
-      :hotels="hotelsList"
-      @change-hotel="handleChangeHotel"
+      :attractions="attractionsList"
+      @change-attraction="handleChangeAttraction"
     />
-    <RightBoard slot="rightBoard" :hotel="activeHotel" />
+    <RightBoard slot="rightBoard" :attraction="activeAttraction" />
   </Layout>
 </template>
 
@@ -24,30 +24,31 @@ export default {
   },
   data() {
     return {
-      activeHotelId: null,
-      hotelsList: null
+      activeAttractionId: null,
+      attractionsList: null
     };
   },
   mounted() {
     axios
-      .get("http://localhost:2017/public/hotels")
-      .then(response => (this.hotelsList = response.data.hotels));
+      .get("http://localhost:2017/public/attractions")
+      .then(response => (this.attractionsList = response.data.attractions));
   },
   computed: {
-    activeHotel() {
+    activeAttraction() {
       const fallback = {};
-      if (!this.activeHotelId) {
+      if (!this.activeAttractionId) {
         return fallback;
       }
 
       return (
-        this.hotelsList.find(({ id }) => id === this.activeHotelId) || fallback
+        this.attractionsList.find(({ id }) => id === this.activeAttractionId) ||
+        fallback
       );
     }
   },
   methods: {
-    handleChangeHotel({ id }) {
-      this.activeHotelId = id;
+    handleChangeAttraction({ id }) {
+      this.activeAttractionId = id;
     }
   }
 };

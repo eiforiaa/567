@@ -1,42 +1,14 @@
 <template>
   <div class="right-board">
-    <div v-if="!isHotelEmpty">
-      <div>Id: {{ hotel.id }}</div>
-      <div>Название: {{ hotel.fullName }}</div>
-      <div>Административный округ: {{ hotel.admArea }}</div>
-      <div>Район: {{ hotel.district }}</div>
-      <div>Адрес: {{ hotel.address }}</div>
-      <div>Полностью адаптированный объект: {{ yesNo(hotel.fullAdapted) }}</div>
-      <div>
-        Объект адаптирован для лиц с нарушением опорно-двигательного аппарата:
-        {{ yesNo(hotel.musculoskeletalSystemViolationAdapted) }}
-      </div>
-      <div>
-        Объект адаптирован для лиц с нарушением зрения:
-        {{ yesNo(hotel.visualImpairmentAdapted) }}
-      </div>
-      <div>
-        Объект адаптирован для лиц с нарушением слуха:
-        {{ yesNo(hotel.hearingImpairmentAdapted) }}
-      </div>
-      <div>
-        Объект адаптирован для лиц, передвигающихся на инвалидной коляске:
-        {{ yesNo(hotel.wheelchairUsersAdapted) }}
-      </div>
-      <div>
-        Наличие специально адаптированных туалетных кабинок:
-        {{ yesNo(hotel.specialToilets) }}
-      </div>
-      <div>
-        Наличие специально адаптированных номеров для ночлега:
-        {{ yesNo(hotel.specialBedrooms) }}
-      </div>
-      <div>
-        Наличие парковочных мест для инвалидов: {{ yesNo(hotel.parking) }}
-      </div>
+    <div v-if="!isAttractionEmpty">
+      <div>Id: {{ attraction.id }}</div>
+      <div>Название: {{ attraction.name }}</div>
+      <div>Округ: {{ attraction.admArea }}</div>
+      <div>Район: {{ attraction.district }}</div>
+      <div>Адрес: {{ attraction.address }}</div>
     </div>
     <div v-else class="right-board__no-selected">
-      Выберите отель
+      Куда вы хотите пойти?
     </div>
   </div>
 </template>
@@ -45,14 +17,14 @@
 export default {
   name: "RightBoard",
   props: {
-    hotel: {
+    attraction: {
       type: Object,
       required: true
     }
   },
   computed: {
-    isHotelEmpty() {
-      return Object.keys(this.hotel).length === 0;
+    isAttractionEmpty() {
+      return Object.keys(this.attraction).length === 0;
     }
   },
   methods: {

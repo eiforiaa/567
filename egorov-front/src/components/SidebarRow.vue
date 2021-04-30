@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     handleClick() {
-      this.$emit("change-hotel", { id: this.id });
+      this.$emit("change-attraction", { id: this.id });
     }
   }
 };
