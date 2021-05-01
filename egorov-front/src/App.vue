@@ -60,19 +60,20 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #c5c6c7;
+  color: #d1e8e2;
   background: var(--ultramarine_80);
+  font-family: "New Tegomin", serif;
 }
 
 :root {
-  --dark_100: #0b0c10;
+  --dark_100: #116466;
   --dark_80: #1f2833;
-  --gray: #c5c6c7;
-  --ultramarine_100: #66fcf1;
-  --ultramarine_80: #45a29e;
+  --gray: #d1e8e2;
+  --ultramarine_100: #d1e8e2;
+  --ultramarine_80: #d9b08c;
 }
 
 html {

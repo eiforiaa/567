@@ -22,7 +22,7 @@ const AttractionController = () => {
           name: entry.Name,
           admArea: entry.AdmArea,
           district: entry.District,
-          address: entry.Address,
+          location: entry.Location,
           
         },
         condition: { id: entry.global_id },

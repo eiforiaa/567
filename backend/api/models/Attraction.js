@@ -10,7 +10,7 @@ const Attraction = sequelize.define('Attraction', {
     unique: true,
     primaryKey: true,
   },
-  Name: {
+  name: {
     type: Sequelize.STRING,
   },
   admArea: {
@@ -19,7 +19,7 @@ const Attraction = sequelize.define('Attraction', {
   district: {
     type: Sequelize.STRING,
   },
-  address: {
+  location: {
     type: Sequelize.STRING,
   },
   

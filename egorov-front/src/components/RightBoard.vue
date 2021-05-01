@@ -5,7 +5,7 @@
       <div>Название: {{ attraction.name }}</div>
       <div>Округ: {{ attraction.admArea }}</div>
       <div>Район: {{ attraction.district }}</div>
-      <div>Адрес: {{ attraction.address }}</div>
+      <div>Адрес: {{ attraction.location }}</div>
     </div>
     <div v-else class="right-board__no-selected">
       Куда вы хотите пойти?

@@ -23,7 +23,7 @@ export default {
 <style scoped>
 .header {
   text-transform: uppercase;
-  color: var(--dark_100);
+  color: var(--dark_80);
   padding: 15px;
   background: var(--ultramarine_80);
 }
