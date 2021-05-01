@@ -70,7 +70,7 @@ body {
 
 :root {
   --dark_100: #116466;
-  --dark_80: #1f2833;
+  --dark_80: #2c3531;
   --gray: #d1e8e2;
   --ultramarine_100: #d1e8e2;
   --ultramarine_80: #d9b08c;
